@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 3 for Usman Khan</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="conversion.css">
+    </head>
+    <body>
+        <h1>Assignment 3</h1>
+        <h1>Usman Khan</h1>
+        <h1>991570330</h1>
+        <h1>Instructor: Sukhbir Singh Tatla</h1>
+        <hr>
+        <a>The following is a conversion for different units</a>
+        <br><br>
+        <button onclick="celsiustoFahrenheit()">Celsius to Fahrenheit</button>
+        <button onclick="fahrenheittoCelsius()">Fahrenheit to Celsius</button>
+        <button onclick="feetToMeters()">Feet to Meters</button>
+        <button onclick="metersToFeet()">Meters to Feet</button>
+        <button onclick="inchesToCentimeters()">Inches to Centimeters</button>
+        <button onclick="centimetersToInches()">Centimeters to Inches</button>
+        <button onclick="poundsToKilograms()">Pounds to Kilograms</button>
+        <button onclick="kilogramsToPounds()">Kilograms to Pounds</button>        
+        <script>
+            function celsiustoFahrenheit(){
+                var c= document.write('Celsius: <P><input type="text" id="celsius">C</P>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                   var cell= (celsius.value)*(1.8);
+                   var temp= cell+32;
+                   var cel= Math.round(temp*100)/100;
+                    document.write('<p>The temperature for</p>'+celsius.value+"<a> C</a><p> in fahrenheit is: </p>"+cel+'<a> F</a>');});}  
+            function fahrenheittoCelsius(){
+                var f= document.write('Fahrenheit: <p><input type="text" id="fahrenheit">F</p>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                    var fa=((fahrenheit.value)-(32));
+                    var fTemp= fa*(5/9);
+                    var far= Math.round(fTemp*100)/100;
+                    document.write('<p>The temperature for</p>'+fahrenheit.value+"<a> F</a><p> in celsius is: </p>"+far+'<a> C</a>');});}
+            function feetToMeters(){
+                var ft= document.write('Feet: <p><input type="text" id="f">FT</p>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                    var m= Math.round((f.value/3.2808)*100)/100;
+                    document.write('<p>The distance in</p>'+f.value+"<a> FT</a><p> in meters is: </p>"+m+'<a> M</a>');});}
+            function metersToFeet(){
+                var m= document.write('Meters: <p><input type="text" id="M">M</p>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                    var f= Math.round((M.value*3.2808)*100)/100;
+                    document.write('<p>The distance in</p>'+M.value+"<a> M</a><p> in feet is: </p>"+f+'<a> FT</a>');});}
+            function inchesToCentimeters(){
+                var i= document.write('Inches: <p><input type="text" id="inches">I</p>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                    var cm= Math.round((inches.value*2.54)*100)/100;
+                    document.write('<p>The distance in</p>'+inches.value+"<a> I</a><p> in centimeters is: </p>"+cm+'<a> CM</a>');});}
+            function centimetersToInches(){
+                var c= document.write('Centimeters: <p><input type="text" id="centimeters">CM</p>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                    var inch= Math.round((centimeters.value/2.54)*100)/100;
+                    document.write('<p>The distance in</p>'+centimeters.value+"<a> CM</a><p> in inches is: </p>"+inch+'<a> I</a>');});}
+            function poundsToKilograms(){
+                var p= document.write('Pounds: <p><input type="text" id="pounds">LB</p>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                    var kg= Math.round((pounds.value/2.2046)*100)/100;
+                    document.write('<p>The weight of</p>'+pounds.value+"<a> LB</a><p> in kilogram is: </p>"+kg+'<a> KG</a>');});}
+            function kilogramsToPounds(){
+                var k = document.write('Kilogram: <p><input type="text" id="kilos">KG</p>');
+                var button = document.createElement("button");
+                button.innerHTML = "calculate";
+                var body = document.getElementsByTagName("body")[0];
+                body.appendChild(button);
+                button.addEventListener ("click", function() {
+                    var lb=Math.round((kilos.value*2.2046)*100)/100;
+                    document.write('<p>The weight of</p>'+kilos.value+"<a> KG</a><p> in pounds is: </p>"+lb+'<a> LB</a>');});}
+        </script>
+    </body>
+</html>
